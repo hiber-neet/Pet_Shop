@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Pet | Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        body{
+            margin:0;
+            background-color: #F0F0F0;
+            scroll-behavior: none;
+            -moz-user-select: none !important;
+            -webkit-touch-callout: none!important;
+            -webkit-user-select: none!important;
+            -khtml-user-select: none!important;
+            -moz-user-select: none!important;
+            -ms-user-select: none!important;
+            user-select: none!important;
+        }
+        .banner{
+            height: 50px;
+            background-color: #FFFFFF;
+        }
+        h3,ul,li,h4,h5{
+            margin: 0;
+        }
+       
+        header{
+            width: 100%;
+            font-family: 'Roboto Slab';
+            letter-spacing: 1px;
+            background-color: #FFFFFF;
+        }
+        header > div{
+            width:1180px;
+            height:70px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(12,80px);
+            column-gap: 20px;
+            align-items: center;
+        }
+        header > div > h3{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-size: 22px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        header > div > ul{
+            grid-column-start: 6;
+            grid-column-end: 8;
+            padding-inline-start: 0px;
+            display: grid;
+            grid-template-columns: repeat(2,80px);
+            column-gap: 20px;
+        }
+         a{
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            color: rgb(0, 0, 0,0.8);
+        }
+        header > div > ul > li{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+           
+        }
+        header > div > div{
+            grid-column: 12;
+            display: flex;
+            justify-content: flex-end;
+            column-gap: 20px;
+        }
+        header > div > div > img{
+            height:22.5px;
+            width: 22.5px;
+            cursor: pointer;
+        }
+        .head-content{
+            height: 800px;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .head-content > img{
+            position: absolute;
+            width: 100%;
+            object-fit: cover;
+            z-index: 99;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        .head-content .content{
+            position: relative;
+            z-index: 100;
+            width: 1180px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(12,80px);
+            column-gap: 20px;
+        }
+        .head-content .content > span{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            font-family: "Roboto Serif";
+            color: #E0E0E0;
+            font-size: 16px;
+            letter-spacing: 0.75px;
+            font-weight: 200;
+            margin-top: 220px;
+        }
+        .head-content .content h1{
+            grid-column: 1/8;
+            font-family: "Roboto Serif";
+            color: #FFFFFF;
+            font-size: 64px;
+            letter-spacing: 0.75px;
+            font-weight: 600;
+            margin: 10px 0 20px 0;
+        }
+        .head-content .content p{
+            grid-column: 1/9;
+            font-family: 'Poppins';
+            color: #E0E0E0;
+            font-size: 18px;
+            letter-spacing: 0.25px;
+            margin: 0;
+        }
+        .head-content .content p > span{
+            color: #FFAA00;
+        }
+        .head-content .content div{
+            margin-top: 60px;
+            grid-column: 1/4;
+            height: 60px;
+            width: 230px;
+            background-color: #FFAA00;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Roboto Mono';
+            font-weight: 900;
+            font-size: 16px;
+            cursor: pointer;
+            color: #FFFFFF;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .container{
+            margin-bottom: 50px;
+        }
+        .container > .support-servive{
+            width: 1180px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 380px 380px 380px;
+            column-gap: 20px;
+            margin-top: 70px;
+        }
+        .container > .support-servive > div{
+            display: grid;
+            height: 200px;
+            background-color: #E0E0E0;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+
+        }
+        .container > .support-servive > div > div{
+            display:grid;
+            row-gap: 12px;
+            position: relative;
+        }
+        .container > .support-servive > div > div > img{
+            position: relative;
+            left:50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+        }
+        .container > .support-servive > div > div > h3{
+            text-align: center;
+            font-family: 'Roboto Mono';
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0.75px;
+            color: #1E1E1E
+        }
+        .container > .support-servive > div > div > span{
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 16px;
+            letter-spacing: 1px;
+            color:#4F4A4A;
+        }
+        .our-product{
+            width: 1180px;
+            margin: 70px auto 100px auto;
+            
+        }
+        .our-product > h3{
+            text-align: center;
+            text-align: center;
+            font-family: 'Roboto Mono';
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.75px;
+            color: #1E1E1E;
+            margin-bottom:25px ;
+        }
+        .our-product > div{
+            display: grid;
+            grid-template-columns: repeat(12,80px);
+            grid-template-rows: 300px 300px 250px;
+            gap: 20px;
+        }
+        .our-product > div > div:nth-child(1){
+            grid-column-start: 1;
+            grid-column-end: 6;
+            background-color: #4F4A4A;
+            grid-row: 1/3;
+            position: relative;
+        }
+        .our-product > div > div:nth-child(n+1) > a{
+            position: absolute;
+            width: 0;
+            height: 100%;
+            left: 0;
+            top:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            color: transparent;
+            font-family: 'Poppins';
+            font-size: 24px;
+            letter-spacing: 1.25px;
+            transition: ease-in-out .5s;
+        }
+        .our-product > div > div:nth-child(n+1):hover > a{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0,0.5);
+            color: #FFFFFF;
+        }
+      
+        .our-product > div > div:nth-child(2){
+            grid-column: 6/13;
+            grid-row: 1/2;
+            position: relative;
+        }
+        .our-product > div > div:nth-child(3){
+            grid-column: 6/13;
+            grid-row: 2/3;
+            height: 300px;
+            position: relative;
+        }
+        .our-product > div > div:nth-child(4){
+            background-color: #1E1E1E;
+            grid-column: span 12;
+            position: relative;
+        }
+        .our-product > div > div{
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+      
+        .our-product > div > div > img{
+            width: 100%;
+            object-fit: cover;
+        }
+        li{
+            list-style: none;
+        }
+        ul{
+            padding-inline-start: 0px;
+        }
+        footer{
+            background-color: #000000;
+        }
+        footer > div{
+            width: 1180px;
+            margin: 0 auto;
+            padding: 143px 0  20px 0;
+        }
+        footer > div > h2{
+            color:#FFFFFF;
+            font-family: 'Roboto Slab';
+            font-size: 24px;
+            letter-spacing: 1px;
+            margin-bottom: 70px;
+        }
+        footer > div > div:nth-child(2){
+            display: grid;
+            grid-template-columns: repeat(12,80px);
+            column-gap: 20px;
+        }
+        footer > div > div > ul:nth-child(1){
+            grid-column: 1/5;
+        }
+        footer > div > div > ul > h3 {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 35px;
+            color: #E0E0E0;
+        }
+        footer > div > div > ul:nth-child(1) li{
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+        }
+        footer > div > div > ul:nth-child(1) li:nth-child(4){
+            align-items: flex-start;
+        }
+        footer > div > div > ul:nth-child(1) li img{
+            width: 24px;
+            height: auto;
+        }
+        footer > div > div > ul li{
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 15px;
+            color: #E0E0E0;
+            margin-bottom: 20px;
+        }
+        footer > div > div > ul:nth-child(2){
+            grid-column: 5/7;
+        }
+        footer > div > div > ul:nth-child(3){
+            grid-column: 7/9;
+        }
+        footer > div > div > ul:nth-child(4){
+            grid-column: 9/11;
+        }
+        footer > div > div:nth-child(3){
+            display: flex;
+            justify-content: center;
+            column-gap: 15px;
+            margin-top: 50px;
+        }
+        footer > div > div:nth-child(4){
+            width: 100%;
+            height: 0.5px;
+            background-color: #4F4A4A;
+            margin-top: 20px;
+        }
+        footer > div > h5{
+            text-align: center;
+            font-family: 'Roboto Slab';
+            font-size: 16px;
+            font-weight: 400;
+            color: #F0F0F0;
+            letter-spacing: 1.25px;
+            margin: 20px 0;
+        }
+       
+        header > div > div.search.active {
+            grid-column-start: 9;
+            grid-column-end: 13;
+            display: grid;
+            justify-content: flex-start;
+            grid-template-columns: 380px;
+
+        }
+        header > div > div.search.active > div{
+            display: none;
+            height: 32px;
+        }
+        header > div > div.search.active > div > input{
+            width: 300px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            font-family: 'Roboto Slab';
+            letter-spacing: 1px;
+            padding-left: 20px;
+            border: 1px solid rgb(0, 0, 0,0.5);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-right: none;
+        }
+        header > div > div.search.active > div > button{
+            width: 98px;
+            border: none;
+            background-color: #FFAA00;
+            display: flex;
+            border: 1px solid #FFAA00 ;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+         header > div > div.search.active > div > button > img{
+            margin-top: 2px;
+        }
+        header > div > div.search.active > img{
+            display: none;
+        }
+        header > div > div.search > div{
+            display: none;
+        }
+        header > div > div.search.active > div{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="banner"></div>
+    <header>
+           <div>
+                <h3 id="logo">
+                    SHOP PET
+                </h3>
+               <script>
+                   const logoBehavior = document.getElementById("logo");
+                   logoBehavior.addEventListener('click', () => {
+                       location.href ="Home.html";
+                   })
+               </script>
+                <ul>
+                    <li>
+                        <a href="Home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="Shopping.jsp">Shop</a>
+                    </li>
+                </ul>
+                <div class="search" id="search">
+                    <div class="search-actived">
+                        <input type="text" id="searchValue" value="" placeholder="Search product..." >
+                        <button id="btAction">
+                            <img src="./img/search_icon white.svg" alt="">
+                        </button>
+                        <script>
+                            const btSearch = document.getElementById("btAction");
+                            const searchValue = document.getElementById("searchValue");
+                            btSearch.addEventListener('click', ()=>{
+                                location.href ="DispatchServlet?btAction=Search&SearchValue="+searchValue.value;
+                            })
+                        </script>
+                    </div>
+                    <img src="./img/Vector.svg" alt="" id="search-non-actived">
+                </div>
+           </div>
+    </header>
+    <div class="head-content">
+        <img src="./img/cat-home.png" alt="">
+        <div class="content">
+            <span>The best a pet can get</span>
+            <h1>BUY A FRIEND FOR LIFE</h1>
+            <p><span>Pet shop</span> - a place where you can find joy for the whole family! We offer a variety of quality products and different pets, helping you build a special relationship with the little members of your family.</p>
+            <div id="shopping_now">Shopping now</div>
+            <script>
+                const shoppingNow = document.getElementById("shopping_now");
+                shoppingNow.addEventListener('click',()=>{
+                    location.href="Shopping.jsp";
+                })
+            </script>
+        </div>
+    </div>
+    <div class="container">
+        <div class="support-servive">
+            <div>
+                <div>
+                    <img src="./img/ship.svg" alt="">
+                    <h3>FREE SHIPPING</h3>
+                    <span>Free ship for all products under 5 km</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="./img/support.svg" alt="">
+                    <h3>BEST ONLINE SUPPORT</h3>
+                    <span>Support time : 6am - 5pm</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="./img/money.svg" alt="">
+                    <h3>MONEY RETURN</h3>
+                    <span>Refund if not satisfied with the product</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="our-product">
+            <h3>OUR PRODUCTS</h3>
+            <div>
+                <div>
+                    <img src="./img/dog-home.png" alt="">
+                    <a href="DispatchServlet?btAction=GetType&GetValue=DOG&category=" >DOG</a>
+                </div>
+                <div>
+                    <img src="./img/cat-home-product.png" alt="">
+                    <a href="DispatchServlet?btAction=GetType&GetValue=CAT&category=">CAT</a>
+                </div>
+                <div>
+                    <img src="./img/hasmter-home.png" alt="">
+                    <a href="DispatchServlet?btAction=GetType&GetValue=HAMSTER&category=">HAMSTER</a>
+                </div>
+                <div>
+                    <img src="./img/supplies-home.png" alt="">
+                    <a href="DispatchServlet?btAction=GetType&GetValue=SERVICE&category=">SUPPLIES</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+       <div>
+        <h2>SHOP PET</h2>
+        <div>
+            <ul>
+                <h3>Reach us</h3>
+                <li>
+                    <img src="./img/phone.svg" alt="">
+                    <span>+843899999999</span>
+                </li>
+                <li>
+                    <img src="./img/email.svg" alt="">
+                    <span>Shoppet@gmail.com</span>
+                </li>
+                <li>
+                    <img src="./img/location.svg" alt="">
+                    <span>Long Thanh My, Thu Duc, Ho Chi Minh, Viet Nam</span>
+                </li>
+            </ul>
+            <ul>
+                <h3>Company</h3>
+                <li>
+                    About
+                </li>
+                <li>
+                    Contact us
+                </li>
+            </ul>
+            <ul>
+                <h3>Legal</h3>
+                <li>Privacy Policy</li>
+                <li>Terms & Services</li>
+                <li>Terms Of Use</li>
+            </ul>
+            <ul>
+                <h3>Useful links</h3>
+                <li>Support</li>
+            </ul>
+        </div>
+        <div>
+            <img src="./img/face.svg" alt="">
+            <img src="./img/insta.svg" alt="">
+            <img src="./img/twitter.svg" alt="">
+        </div>
+        <div class="line"></div>
+        <h5>Copyright&copy; : shoppet@gmail.com</h5>
+       </div>
+    </footer>
+    <script>
+        const searchNonActived = document.getElementById("search-non-actived");
+        const searchHome =  document.getElementById("search");
+        searchNonActived.addEventListener('click', () => {
+            searchHome.classList.add("active");
+        })
+        document.addEventListener('click', (event) =>{
+            var isClickInsideSearch = document.querySelector('.search-actived').contains(event.target);
+            var isClickOutSideSearchIcon = document.querySelector('#search-non-actived').contains(event.target);
+            if(!isClickInsideSearch && !isClickOutSideSearchIcon){
+                searchHome.classList.remove("active");
+            }
+        } )
+    </script>
+</body>
+</html>
